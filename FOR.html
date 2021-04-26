@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //ARRAY
+        /*  Errores
+
+            let arrayERROR;
+            arrayERROR[5] = 22;
+
+            let array02 = new array02(10) // te da error por que tienes que poner "new Array" con la A mayus
+        */
+        
+        /* array ejemplo 1  
+        -- Aqui solo estamos inicializando un array sin especificar longitud huecos como le quieras llamar
+        */
+        let array01 = [];
+        array01[5] = 22;
+        console.log("Longitud del array01= "+ array01.length);//Resultado = 6,por que coje 6 por que el sabe que en la posicion 5 le hemos metido un dato por lo que coje desde el 0 hasta el valor añadido 
+        for (let i = 0; i <= 5; i++)
+        {
+            console.log("Posicion" + i + "=" + array01[i]);
+        }
+        array01[11] = 22;
+        array01[6] =21
+        console.log("Longitud del array01= "+ array01.length);
+
+
+       /* array ejemplo 2 
+        - Aqui le estamos especificar cuntoa huecos va a tener el array       
+       */
+        
+        let array02 = new Array(10);
+        array02[8] = 33
+        console.log("\nLongitud del array02= "+ array02.length); // resultado = 10 aqui pues como lo hemos especificado aparece
+        for (let i = 0; i < array02.length; i++)
+        {
+            console.log("Posicion" + i + "=" + array02[i]);
+        }
+
+        /* Que pasa si se le mete mas sin especificar */
+
+        console.log("\nQue pasa si se le mete mas sin especificar al array al que ya le hemos puesto una longitus:");        
+
+        array02[12] = "extra"; 
+        console.log("Longitud del array02 con huecos nuevos sin expecificar = "+ array02.length);// resultado =13
+
+        for (let i = 0; i < array02.length; i++)
+        {
+            console.log("Posicion" + i + "=" + array02[i]);
+        }
+
+        /* DATO 
+           -el undefined no es un error por lo que podemos usarlo para nuesta logica de app
+        */ 
+        
+        for (let i = 0; i < array02.length; i++)
+        {
+            if (array02[i] === undefined)
+            {
+                console.log('Sanja Puto');
+            }
+            else
+            {
+                console.log("Posicion[" + i + "]=" + array02[i]);
+            }
+        }
+
+
+        
+
+    </script>
+</body>
+</html>
